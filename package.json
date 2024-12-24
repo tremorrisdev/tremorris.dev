@@ -1,0 +1,28 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@iconify-json/line-md": "^1.2.2",
+    "@nuxt/devtools": "latest",
+    "@nuxt/ui": "^2.19.2",
+    "@vueuse/core": "^12.0.0",
+    "@vueuse/nuxt": "^12.0.0",
+    "nuxt": "^3.14.1592"
+  },
+  "prettier": {
+    "bracketSameLine": false,
+    "semi": false,
+    "singleQuote": true,
+    "singleAttributePerLine": true,
+    "tabWidth": 2,
+    "htmlWhitespaceSensitivity": "ignore"
+  }
+}
