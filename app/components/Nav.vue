@@ -14,7 +14,9 @@
       label="Resume"
     />
     <UButton
-      :variant="$route.matched.some(r => r.name === 'projects') ? 'solid' : 'ghost'"
+      :variant="
+        $route.matched.some((r) => r.name === 'projects') ? 'solid' : 'ghost'
+      "
       icon="i-line-md-star"
       :to="{ name: 'projects' }"
       @click="$emit('nav')"

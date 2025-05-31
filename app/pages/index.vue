@@ -125,7 +125,8 @@
     <p class="font-bold text-sky-500">SKILLS</p>
     <p>
       <strong>Front-End Technologies:</strong>
-      Vue, React, Nuxt, Blazor/Razor, TypeScript/JavaScript, Node, Bun, Tauri, Tailwind
+      Vue, React, Nuxt, Blazor/Razor, TypeScript/JavaScript, Node, Bun, Tauri,
+      Tailwind
     </p>
     <p>
       <strong>Back-End Technologies:</strong>

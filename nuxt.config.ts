@@ -2,12 +2,12 @@
 export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@vueuse/nuxt"],
-  compatibilityDate: "2025-04-20",
+  modules: ['@nuxt/ui', '@vueuse/nuxt'],
+  compatibilityDate: '2025-04-20',
   future: {
-    compatibilityVersion: 4
+    compatibilityVersion: 4,
   },
   icon: {
-    serverBundle: { collections: ['line-md'] }
-  }
+    serverBundle: { collections: ['line-md'] },
+  },
 })

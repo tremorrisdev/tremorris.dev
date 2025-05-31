@@ -6,7 +6,11 @@
       :key="idx"
       class="h-48 w-80 p-0 m-0 ring-1 ring-accented rounded-lg cursor-pointer transition-all hover:scale-110 duration-300 opacity-0"
       @click="
-        () => $router.push({ name: 'projects-project', params: { project: p.name } })
+        () =>
+          $router.push({
+            name: 'projects-project',
+            params: { project: p.name },
+          })
       "
     >
       <div

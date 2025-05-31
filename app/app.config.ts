@@ -2,10 +2,10 @@ export default defineAppConfig({
   ui: {
     colors: {
       primary: 'sky',
-      neutral: 'slate'
-    }
+      neutral: 'slate',
+    },
   },
   icon: {
-    mode: 'svg'
-  }
+    mode: 'svg',
+  },
 })
