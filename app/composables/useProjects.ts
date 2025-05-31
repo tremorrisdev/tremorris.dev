@@ -1,9 +1,12 @@
 export const useProjects = () => {
+  const createBg = ({ dark, light }: { dark: string; light: string }) =>
+    `bg-[radial-gradient(ellipse_200%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_10%,rgba(249,250,251,0.1)_30%),url('${light}')] dark:bg-[radial-gradient(ellipse_200%_100%,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_10%,rgba(17,24,39,0.1)_30%),url('${dark}')]`
+
   const projects = [
     {
       name: 'Chattr',
       subtitle: 'Realtime Chat & Analytics',
-      bg: "bg-[radial-gradient(ellipse_200%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_10%,rgba(249,250,251,0.1)_30%),url('/chattr/home_lt.png')] dark:bg-[radial-gradient(ellipse_200%_100%,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_10%,rgba(17,24,39,0.1)_30%),url('../chattr/home.png')]",
+      bg: createBg({ light: '/chattr/home_lt.png', dark: '/chattr/home.png' }),
       img: ['/chattr/home.png'],
       description:
         'Tauri-hosted desktop web application facilitating realtime messaging, logistics, and analytics across a fleet of over a thousand drivers.',
@@ -12,7 +15,7 @@ export const useProjects = () => {
     {
       name: 'TSI Cafe',
       subtitle: 'Intranet App Collection',
-      bg: "bg-[radial-gradient(ellipse_200%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_10%,rgba(249,250,251,0.1)_30%),url('/cafe/home_lt.png')] dark:bg-[radial-gradient(ellipse_200%_100%,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_10%,rgba(17,24,39,0.1)_30%),url('/cafe/home.png')]",
+      bg: createBg({ light: '/cafe/home_lt.png', dark: '/cafe/home.png' }),
       img: [
         '/cafe/home.png',
         '/cafe/hr.png',
@@ -27,7 +30,7 @@ export const useProjects = () => {
     {
       name: 'TSI Admin Center',
       subtitle: 'Android Environment Manager',
-      bg: "bg-[radial-gradient(ellipse_200%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_10%,rgba(249,250,251,0.1)_30%)] dark:bg-[radial-gradient(ellipse_200%_100%,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_10%,rgba(17,24,39,0.1)_30%)]",
+      bg: 'bg-[radial-gradient(ellipse_200%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_10%,rgba(249,250,251,0.1)_30%)] dark:bg-[radial-gradient(ellipse_200%_100%,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_10%,rgba(17,24,39,0.1)_30%)]',
       img: [],
       description:
         'Central dependency that provides authentication, log collection, long-running network operations, and notification support for all of TSI’s applications running in a managed Android environment.',
@@ -36,7 +39,7 @@ export const useProjects = () => {
     {
       name: 'DriverPortal',
       subtitle: 'Employee Dashboard',
-      bg: "bg-[radial-gradient(ellipse_200%_100%,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_10%,rgba(249,250,251,0.1)_30%),url('/driver/home_lt.png')] dark:bg-[radial-gradient(ellipse_200%_100%,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_10%,rgba(17,24,39,0.1)_30%),url('/driver/home.png')]",
+      bg: createBg({ light: '/driver/home_lt.png', dark: '/driver/home.png' }),
       img: [
         '/driver/home_lt.png',
         '/driver/terminals.png',
@@ -51,7 +54,7 @@ export const useProjects = () => {
 
   const route = useRoute()
   const current = computed(() =>
-    projects.find((p) => p.name === route.params.project)
+    projects.find((p) => p.name === route.params.project),
   )
 
   return {
