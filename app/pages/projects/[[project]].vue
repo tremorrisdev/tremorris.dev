@@ -3,6 +3,9 @@
     :default-open="!!$route.params.project"
     :fullscreen="!breakpoints.sm.value"
     :description="current?.subtitle"
+    :ui="{
+      body: 'sm:max-h-[700px]'
+    }"
   >
     <template #title>
       <p ref="card-root">{{ current?.name }}</p>
@@ -30,20 +33,22 @@
         dots
         :items="current.img"
         :ui="{
-          item: 'basis-[80%] transition-opacity [&:not(.is-snapped)]:opacity-10',
+          item: `${current.img.length > 1 ? 'basis-[80%]' : ''} transition-opacity [&:not(.is-snapped)]:opacity-10`,
         }"
       >
         <img :src="item" />
       </UCarousel>
-      <p>
-        {{ current?.description }}
-      </p>
+      <ContentRenderer
+        v-if="md"
+        :value="md"
+      />
     </template>
   </UModal>
 </template>
 
 <script setup lang="ts">
 import { breakpointsTailwind } from '@vueuse/core'
+import type { ContentCollectionItem } from '@nuxt/content'
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const { current } = useProjects()
@@ -52,4 +57,44 @@ const router = useRouter()
 watch(useTemplateRef('card-root'), (val) => {
   if (!val) router.back()
 })
+
+const md = ref<ContentCollectionItem | null>(null)
+watch(current, (val) => {
+  if (!val) md.value = null
+  else
+    queryCollection('content')
+      .path(`/${val.name.replace(/\s/g, '').toLowerCase()}`)
+      .first()
+      .then((data) => (md.value = data))
+}, {
+  immediate: true
+})
 </script>
+
+<style scoped>
+@reference "~/assets/css/main.css";
+
+:deep(h2) {
+  @apply text-xl mb-2;
+}
+
+:deep(ol), :deep(ul) {
+  @apply mt-2
+}
+
+:deep(ol) {
+  @apply list-decimal ml-8
+}
+
+:deep(ul) {
+  @apply ml-4
+}
+
+:deep(li) {
+  @apply my-2
+}
+
+:deep(input[type=checkbox]) {
+  @apply mr-1
+}
+</style>

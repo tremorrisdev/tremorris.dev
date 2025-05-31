@@ -1,34 +1,36 @@
 <template>
-  <UContainer class="flex flex-wrap justify-center gap-8">
-    <div
-      v-for="(p, idx) in projects"
-      :id="`card-${idx}`"
-      :key="idx"
-      class="h-48 w-80 p-0 m-0 ring-1 ring-accented rounded-lg cursor-pointer transition-all hover:scale-110 duration-300 opacity-0"
-      @click="
-        () =>
-          $router.push({
-            name: 'projects-project',
-            params: { project: p.name },
-          })
-      "
-    >
+  <UContainer>
+    <div class="flex flex-wrap justify-center gap-8 pb-4">
       <div
-        class="h-full w-full flex items-center justify-center relative select-none"
+        v-for="(p, idx) in projects"
+        :id="`card-${idx}`"
+        :key="idx"
+        class="h-48 w-80 p-0 m-0 ring-1 ring-accented rounded-lg cursor-pointer transition-all hover:scale-110 duration-300 opacity-0"
+        @click="
+          () =>
+            $router.push({
+              name: 'projects-project',
+              params: { project: p.name },
+            })
+        "
       >
         <div
-          class="bg-cover blur-[2px] top-0 left-0 bottom-0 right-0 h-full overflow-hidden absolute opacity-40 bg-local"
-          :class="p.bg"
-        ></div>
-        <p
-          :id="`card__name-${idx}`"
-          class="font-bold z-10 sm:z-20 transition-opacity opacity-0"
+          class="h-full w-full flex items-center justify-center relative select-none"
         >
-          {{ p.name }}
-        </p>
+          <div
+            class="bg-cover blur-[2px] top-0 left-0 bottom-0 right-0 h-full overflow-hidden absolute opacity-40 bg-local"
+            :class="p.bg"
+          ></div>
+          <p
+            :id="`card__name-${idx}`"
+            class="font-bold z-10 sm:z-20 transition-opacity opacity-0"
+          >
+            {{ p.name }}
+          </p>
+        </div>
       </div>
+      <NuxtPage />
     </div>
-    <NuxtPage />
   </UContainer>
 </template>
 

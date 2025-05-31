@@ -1,6 +1,6 @@
 <template>
   <UApp>
-    <div class="h-lvh overflow-hidden flex flex-col">
+    <div class="h-svh max-h-svh overflow-hidden flex flex-col">
       <header class="sticky top-0 w-full bg-default/75 backdrop-blur">
         <div class="flex justify-between h-full mx-4 py-2">
           <UDrawer
@@ -67,8 +67,10 @@
         </div>
         <USeparator />
       </header>
-      <div class="grow overflow-y-scroll pt-4">
+      <div class="grow flex flex-col overflow-y-scroll pt-4">
         <NuxtPage />
+        <div class="grow"></div>
+        <p class="text-center text-sm text-muted pb-1">© 2025 Trevor Morris</p>
       </div>
     </div>
   </UApp>
