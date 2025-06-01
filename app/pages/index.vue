@@ -11,7 +11,7 @@
     <ul class="pl-10 list-disc">
       <li>
         Led front-end design and assisted with back-end infrastructure for a
-        realtime chat and analytics platform facilitating 50,000+ daily
+        real-time chat and analytics platform facilitating 50,000+ daily
         interactions.
       </li>
       <li>
@@ -39,7 +39,7 @@
       Cheney, WA —
       <i>Junior .NET Developer</i>
     </p>
-    <p class="font-extralight text-sm mb-1">JUNE 2022 - SEPT 2024</p>
+    <p class="font-extralight text-sm mb-1">JUNE 2022 - SEPTEMBER 2024</p>
     <ul class="pl-10 list-disc">
       <li>
         Developed a document scanning application for digitizing and indexing
@@ -93,10 +93,10 @@
     <p>
       <strong>Chattr</strong>
       —
-      <i>Realtime Chat and Analytics</i>
+      <i>Real-time Chat and Analytics</i>
     </p>
     <p>
-      Tauri-hosted desktop web application facilitating realtime messaging,
+      Tauri-hosted desktop web application facilitating real-time messaging,
       logistics, and analytics across a fleet of over a thousand drivers.
     </p>
     <br />
