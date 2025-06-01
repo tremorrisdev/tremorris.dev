@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    },
+  },
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
   modules: ['@nuxt/ui', '@vueuse/nuxt', '@nuxt/content'],

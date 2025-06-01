@@ -136,9 +136,6 @@
       <strong>Development Tools:</strong>
       Git, CI/CD, PowerShell, Bash, Azure DevOps, Azure Cloud, Gradle, Android
     </p>
-    <br />
-    <p class="font-bold text-sky-500">REFERENCES</p>
-    <p>Available upon request</p>
     <UTooltip
       text="Download resume"
       class="fixed bottom-6 right-6 xl:right-[calc(50%-600px)]"
