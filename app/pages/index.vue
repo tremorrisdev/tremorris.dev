@@ -140,13 +140,13 @@
       text="Download resume"
       class="fixed bottom-6 right-6 xl:right-[calc(50%-600px)]"
     >
-      <UButton
-        class="rounded-3xl"
-        size="xl"
-        icon="i-line-md-file-download"
-        to="/resume.pdf"
-        target="_top"
-      />
+      <a href="/resume.pdf">
+        <UButton
+          class="rounded-3xl cursor-pointer"
+          size="xl"
+          icon="i-line-md-file-download"
+        />
+      </a>
     </UTooltip>
     <br />
   </UContainer>
