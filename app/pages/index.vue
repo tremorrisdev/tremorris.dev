@@ -66,7 +66,7 @@
     <p class="font-extralight text-sm mb-1">NOVEMBER 2022 - MARCH 2023</p>
     <ul class="pl-10 list-disc">
       <li>
-        Volunteered as part of a program called “Kids Drop In and Code” aiming
+        Volunteered as part of a program called "Kids Drop In and Code" aiming
         to remove financial and educational barriers for the next generation of
         engineers.
       </li>
@@ -118,7 +118,7 @@
     </p>
     <p>
       Central dependency that provides authentication, log collection,
-      long-running network operations, and notification support for all of TSI’s
+      long-running network operations, and notification support for all of TSI's
       applications running in a managed Android environment.
     </p>
     <br />
